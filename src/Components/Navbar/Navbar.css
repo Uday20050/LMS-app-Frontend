@@ -1,0 +1,91 @@
+/* General Styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 10px;
+    background-color: #fff;
+    position: fixed;
+    flex-wrap: wrap;
+}
+
+.nav-logo {
+    margin: 0;
+    color: rgb(91, 17, 201);
+    font-family: Outfit;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    gap: 90px;
+    justify-content: flex-end;
+}
+
+.nav-menu li {
+    display: inline;
+}
+
+.nav-contact {
+    border-radius: 50px;
+    padding: 10px 38px;
+    background: #fff;
+    color: #262626;
+}
+.hamburger{
+    display: none;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu.show {
+        display: flex;
+        background-color: #fff;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+
+}
